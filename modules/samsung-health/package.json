@@ -1,0 +1,10 @@
+{
+  "name": "samsung-health",
+  "version": "1.0.0",
+  "description": "Samsung Health integration for React Native Expo",
+  "main": "index.ts",
+  "scripts": {},
+  "keywords": ["expo", "samsung-health", "health", "android"],
+  "author": "Holistiq",
+  "license": "MIT"
+}

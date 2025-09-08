@@ -1,0 +1,9 @@
+{
+  "platforms": ["android"],
+  "android": {
+    "modules": ["com.holistiq.samsunghealth.SamsungHealthModule"]
+  },
+  "ios": {
+    "modules": []
+  }
+}

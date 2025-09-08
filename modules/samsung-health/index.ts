@@ -1,0 +1,2 @@
+export { SamsungHealth as default, SamsungHealth, type HealthDataType, type StepData, type HeartRateData } from './src/SamsungHealth';
+export { default as SamsungHealthModule } from './src/SamsungHealthModule';

@@ -16,7 +16,15 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.ctrl_alt_dan.holisticexpo",
+      "permissions": [
+        "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+        "com.samsung.shealth.permission.READ_STEP_COUNT",
+        "com.samsung.shealth.permission.READ_HEART_RATE",
+        "com.samsung.shealth.permission.READ_SLEEP",
+        "com.samsung.shealth.permission.READ_WEIGHT"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +45,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c462ef4c-f05a-4abc-bce5-1e6f6f644e88"
+      }
+    },
+    "owner": "ctrl_alt_dan"
   }
 }

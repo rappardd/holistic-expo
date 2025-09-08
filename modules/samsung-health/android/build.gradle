@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = 'com.holistiq.samsunghealth'
+version = '0.1.0'
+
+// Simple helper that allows the root project to override versions declared by this library.
+ext.safeExtGet = { prop, fallback ->
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+// Ensures backward compatibility
+ext.getKotlinVersion = {
+  if (ext.has("kotlinVersion")) {
+    ext.kotlinVersion()
+  } else {
+    ext.safeExtGet("kotlinVersion", "1.8.10")
+  }
+}
+
+android {
+  compileSdkVersion safeExtGet("compileSdkVersion", 34)
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+  }
+
+  kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_11.majorVersion
+  }
+
+  namespace "com.holistiq.samsunghealth"
+  defaultConfig {
+    minSdkVersion safeExtGet("minSdkVersion", 29)
+    targetSdkVersion safeExtGet("targetSdkVersion", 34)
+    versionCode 1
+    versionName "1.0"
+  }
+  lint {
+    abortOnError false
+  }
+  publishing {
+    singleVariant("release") {
+      withSourcesJar()
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation project(':expo-modules-core')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${getKotlinVersion()}"
+  implementation files('libs/samsung-health-data-api-1.0.0.aar')
+}
