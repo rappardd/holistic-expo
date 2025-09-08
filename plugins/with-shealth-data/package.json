@@ -1,0 +1,10 @@
+{
+  "name": "with-shealth-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@expo/config-plugins": "^8.0.0"
+  }
+}
