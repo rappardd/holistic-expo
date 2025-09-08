@@ -18,6 +18,7 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.ctrl_alt_dan.holisticexpo",
+      "minSdkVersion": 29,
       "permissions": [
         "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
         "com.samsung.shealth.permission.READ_STEP_COUNT",

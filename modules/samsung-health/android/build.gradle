@@ -54,5 +54,5 @@ repositories {
 dependencies {
   implementation project(':expo-modules-core')
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${getKotlinVersion()}"
-  implementation files('libs/samsung-health-data-api-1.0.0.aar')
+  implementation files('libs/samsung-health-data-api.aar')
 }

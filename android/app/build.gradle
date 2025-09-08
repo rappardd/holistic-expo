@@ -152,7 +152,6 @@ android {
 }
 
 dependencies {
-        implementation(name: 'samsung-health-data-api', ext: 'aar')
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
