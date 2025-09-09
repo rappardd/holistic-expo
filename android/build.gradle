@@ -30,11 +30,6 @@ allprojects {
     google()
     mavenCentral()
     maven { url 'https://www.jitpack.io' }
-    
-    // Add flatDir repository for local AAR files
-    flatDir {
-      dirs 'app/libs'
-    }
   }
 }
 
